@@ -20,7 +20,8 @@ const StoreListScreen = props => {
   }
 
   const navigateOrderScreen = () => {
-    props.navigation.navigate('Order')
+    props.navigation.navigate('Order');
+    setSearchText('');
   }
 
   const searchTextLC = searchText.toLowerCase();
