@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, Button, Picker } from 'react-native';
-
+import { Button, Picker, StyleSheet, Text, View } from 'react-native';
 import { CheckBox } from 'react-native-elements';
 
 const OrderScreen = props => {
-  const [checked, setChecked] = useState(false)
-  const [fishType, setFishType] = useState('');
+  const [peas, setPeas] = useState(false)
+  const [fishType, setFishType] = useState('Cod');
+
+  const navigateInformationScreen = () => {
+    props.navigation.navigate({
+      routeName: 'Information',
+      params: {
+        peas,
+        fishType,
+      }
+    })
+  }
 
   return (
     <View style={styles.screen}>
@@ -18,34 +27,33 @@ const OrderScreen = props => {
         onValueChange={(itemValue) =>
           setFishType(itemValue)
         }>
-        <Picker.Item label="Cod" value="cod" />
-        <Picker.Item label="Halibut" value="halibut" />
+        <Picker.Item label="Cod" value="Cod" />
+        <Picker.Item label="Halibut" value="Halibut" />
       </Picker>
       <View style={styles.checkboxContainer}>
         <CheckBox
           containerStyle={{ backgroundColor: 'transparent', borderWidth: 0 }}
           title="Add mushy peas"
           checkedColor='green'
-          checked={checked}
-          onPress={() => setChecked(!checked)}
+          checked={peas}
+          onPress={() => setPeas(!peas)}
         />
       </View>
       <View style={styles.checkoutContainer}>
         <Button
           title="Checkout"
-          onPress={() => {
-            props.navigation.navigate('Information')
-          }} />
+          onPress={navigateInformationScreen} />
       </View>
     </View>
   )
-}
+};
 
 const styles = StyleSheet.create({
   screen: {
     alignItems: 'center',
     width: '100%',
     height: '100%',
+    marginTop: 40
   },
   text: {
     fontSize: 20,
@@ -65,6 +73,6 @@ const styles = StyleSheet.create({
   checkoutContainer: {
     paddingTop: 10
   }
-})
+});
 
 export default OrderScreen;

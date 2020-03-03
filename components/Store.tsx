@@ -1,32 +1,31 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
-
+import { Button, StyleSheet, Text, View } from 'react-native';
 import { Card, Divider } from 'react-native-elements';
-import {Store as StoreType} from '../screens/StoreListScreen'
+import { Store as StoreType } from '../screens/StoreListScreen';
 
-type Props ={
+type Props = {
   navigateOrderScreen: () => void,
   store: StoreType
 }
 
 const Store = (props: Props) => {
-  const { store: {name, description}, navigateOrderScreen } = props;
+  const { store: { name, description }, navigateOrderScreen } = props;
   return (
     <Card>
-        <View style={styles.storeContainer}>
-          <View style={styles.nameContainer}>
-            <Text style={styles.name}>
-              {name}
-            </Text>
-          </View>
-          <Text style={styles.description}>
-            {description}
+      <View style={styles.storeContainer}>
+        <View style={styles.nameContainer}>
+          <Text style={styles.name}>
+            {name}
           </Text>
         </View>
-        <Divider />
-        <Button
-          title="Go to Order"
-          onPress={navigateOrderScreen} />
+        <Text style={styles.description}>
+          {description}
+        </Text>
+      </View>
+      <Divider />
+      <Button
+        title="Go to Order"
+        onPress={navigateOrderScreen} />
     </Card>
   )
 }
