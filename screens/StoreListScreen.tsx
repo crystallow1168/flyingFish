@@ -1,8 +1,6 @@
-import React, {useState} from 'react';
-import { View, Text, StyleSheet, ScrollView, Button } from 'react-native';
-
+import React, { useState } from 'react';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import { SearchBar } from 'react-native-elements';
-
 import Stores from '../components/Stores';
 import mockData from '../data.json';
 
@@ -17,8 +15,8 @@ const StoreListScreen = props => {
   const [storeList, setStoreList] = useState<Store[]>(mockData.data);
   const [searchText, setSearchText] = useState('');
 
-  const handleSearch = (inputText) => {
-    setSearchText(inputText)
+  const handleSearch = (inputText: string) => {
+    setSearchText(inputText);
   }
 
   const navigateOrderScreen = () => {
@@ -27,25 +25,26 @@ const StoreListScreen = props => {
 
   const searchTextLC = searchText.toLowerCase();
   const filteredStoreList = searchText.length > 0 ? storeList.filter(store => store.name.toLowerCase().includes(searchTextLC)) : storeList;
-  
+
   return (
     <ScrollView style={styles.screen}>
       <View>
-      <SearchBar
-        placeholder="Search Here..."
-        onChangeText={handleSearch}
-        value={searchText}
-      />
+        <SearchBar
+          placeholder="Search Here..."
+          onChangeText={handleSearch}
+          value={searchText}
+        />
       </View>
-      <Stores data={filteredStoreList} navigateOrderScreen={navigateOrderScreen}/>
+      <Stores data={filteredStoreList} navigateOrderScreen={navigateOrderScreen} />
     </ScrollView>
   )
-}
+};
 
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
+    marginTop: 40
   },
-})
+});
 
 export default StoreListScreen;
