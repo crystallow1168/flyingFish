@@ -1,20 +1,36 @@
-import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
-
-import StoreListScreen from '../screens/StoreListScreen';
+import { createStackNavigator } from 'react-navigation-stack';
+import ConfirmationScreen from '../screens/ConfirmationScreen';
+import InformationScreen from '../screens/InformationScreen';
 import LandingScreen from '../screens/LandingScreen';
 import OrderScreen from '../screens/OrderScreen';
-import InformationScreen from '../screens/InformationScreen';
-import ConfirmationScreen from '../screens/ConfirmationScreen';
-
-
+import StoreListScreen from '../screens/StoreListScreen';
 
 const MealsNavigator = createStackNavigator({
-  Landing: LandingScreen,
-  Stores: StoreListScreen,
-  Order: OrderScreen,
-  Information: InformationScreen,
-  Confirmation: ConfirmationScreen,
-})
+  Landing: {
+    screen: LandingScreen,
+    navigationOptions: {
+      header: null,
+    },
+  },
+  Stores: {
+    screen: StoreListScreen,
+    navigationOptions: {
+      header: null,
+    },
+  },
+  Order: {
+    screen: OrderScreen,
+  },
+  Information: {
+    screen: InformationScreen,
+  },
+  Confirmation: {
+    screen: ConfirmationScreen,
+    navigationOptions: {
+      header: null,
+    },
+  },
+});
 
-export default createAppContainer(MealsNavigator)
+export default createAppContainer(MealsNavigator);
