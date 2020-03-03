@@ -1,0 +1,54 @@
+{
+  "data": [
+    {
+      "id": 101,
+      "name": "K & C Food wholesale",
+      "description": "Lorem ipsum dolor sit amet. Felis eget nunc lobortis mattis aliquam faucibus purus."
+    },
+    {
+      "id": 126,
+      "name": "La Marea of the Sea",
+      "description": "Lorem ipsum dolor sit amet. Feugiat nisl pretium fusce id."
+    },
+    {
+      "id": 3109,
+      "name": "The Kickin' Fish",
+      "description": "Lorem ipsum dolor sit amet. Orci ac auctor augue mauris augue neque gravida in fermentum."
+    },
+    {
+      "id": 18,
+      "name": "EMC Seafood and Raw Bar",
+      "description": "Lorem ipsum dolor sit amet. Maecenas volutpat blandit aliquam etiam erat."
+    },
+    {
+      "id": 9156,
+      "name": "Oyster Bar & Seafood",
+      "description": "Lorem ipsum dolor sit amet. Sed ullamcorper morbi tincidunt ornare massa."
+    },
+    {
+      "id": 2291,
+      "name": "Claw Shack",
+      "description": "Lorem ipsum dolor sit amet. Viverra nibh cras pulvinar mattis nunc sed blandit libero."
+    },
+    {
+      "id": 198,
+      "name": "The Fish City",
+      "description": "Lorem ipsum dolor sit amet. Et tortor consequat id porta nibh venenatis."
+    },
+    {
+      "id": 229,
+      "name": "The Fish Market",
+      "description": "Lorem ipsum dolor sit amet. Bibendum ut tristique et egestas quis ipsum suspendisse."
+    },
+    {
+      "id": 8654,
+      "name": "Big T's Seafood",
+      "description": "Lorem ipsum dolor sit amet. Etiam sit amet nisl purus in mollis nunc."
+    },
+    {
+      "id": 7993,
+      "name": "Billy’s Boston Chowder House",
+      "description": "Lorem ipsum dolor sit amet. Viverra nam libero justo laoreet sit amet cursus."
+    }
+  ]
+}
