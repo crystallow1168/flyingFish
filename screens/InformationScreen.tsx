@@ -7,7 +7,7 @@ const InformationScreen = props => {
   const [address, setAddress] = useState('');
   const [instructions, setInstructions] = useState('');
 
-  const checkEmptyInput = (input) => {
+  const checkEmptyInput = (input: string) => {
     if (input.length > 0) {
       return false;
     }
