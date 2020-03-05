@@ -65,7 +65,6 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 20,
     fontWeight: 'bold',
-    paddingTop: 50
   },
   textContainer: {
     alignSelf: 'center'
