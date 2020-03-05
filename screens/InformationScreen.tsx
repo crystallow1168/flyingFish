@@ -77,11 +77,11 @@ const styles = StyleSheet.create({
   infoContainer: {
     marginTop: 100,
     width: '90%',
-    height: '40%',
+    height: '50%',
     justifyContent: 'space-evenly'
   },
   buttonContainer: {
-    marginTop: 100,
+    marginTop: 80,
   }
 });
 
