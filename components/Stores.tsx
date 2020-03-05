@@ -5,15 +5,16 @@ import { Store as StoreType } from '../screens/StoreListScreen';
 
 type Props = {
   data: StoreType[],
-  navigateOrderScreen: () => void
+  handleClearSearch: () => void,
+  navigation: any
 }
 
 const Stores = (props: Props) => {
 
-  const { data, navigateOrderScreen } = props;
+  const { data, handleClearSearch } = props;
   return (
     <View>
-      {data.map(store => <Store store={store} key={store.id} navigateOrderScreen={navigateOrderScreen} />)}
+      {data.map(store => <Store store={store} key={store.id} handleClearSearch={handleClearSearch} navigation={props.navigation}/>)}
     </View>
   )
 }

@@ -7,7 +7,10 @@ import mockData from '../data.json';
 export type Store = {
   id: number,
   name: string,
-  description: string
+  description: string,
+  menu: {
+    fixed: String[],
+  }
 }
 
 const StoreListScreen = props => {
@@ -19,8 +22,7 @@ const StoreListScreen = props => {
     setSearchText(inputText);
   }
 
-  const navigateOrderScreen = () => {
-    props.navigation.navigate('Order');
+  const handleClearSearch = () => {
     setSearchText('');
   }
 
@@ -36,7 +38,7 @@ const StoreListScreen = props => {
           value={searchText}
         />
       </View>
-      <Stores data={filteredStoreList} navigateOrderScreen={navigateOrderScreen} />
+      <Stores data={filteredStoreList} navigation={props.navigation} handleClearSearch={handleClearSearch} />
     </ScrollView>
   )
 };

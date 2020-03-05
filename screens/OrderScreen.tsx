@@ -3,6 +3,9 @@ import { Button, Picker, StyleSheet, Text, View } from 'react-native';
 import { CheckBox } from 'react-native-elements';
 
 const OrderScreen = props => {
+  const name = props.navigation.getParam('name');
+  const menu = props.navigation.getParam('menu');
+  
   const [peas, setPeas] = useState(false)
   const [fishType, setFishType] = useState('Cod');
 
@@ -18,6 +21,9 @@ const OrderScreen = props => {
 
   return (
     <View style={styles.screen}>
+      <View style={styles.nameContainer}>
+        <Text style={styles.name}> {name}</Text>
+      </View>
       <View style={styles.textContainer}>
         <Text style={styles.text}> Select fish type</Text>
       </View>
@@ -27,8 +33,11 @@ const OrderScreen = props => {
         onValueChange={(itemValue) =>
           setFishType(itemValue)
         }>
-        <Picker.Item label="Cod" value="Cod" />
-        <Picker.Item label="Halibut" value="Halibut" />
+          {menu.fixed.map((item: string) => <Picker.Item
+              label={item}
+              value={item}
+              key={item}
+            />)}
       </Picker>
       <View style={styles.checkboxContainer}>
         <CheckBox
@@ -55,15 +64,18 @@ const styles = StyleSheet.create({
     height: '100%',
     marginTop: 40
   },
-  text: {
-    fontSize: 20,
+  name: {
+    fontSize: 30,
     fontWeight: 'bold'
   },
-  textContainer: {
-    paddingTop: 140
+  text: {
+    fontSize: 20,
   },
-  pickerContainer: {
-    paddingTop: 10,
+  nameContainer: {
+    paddingTop: 30
+  },
+  textContainer: {
+    paddingTop: 100
   },
   checkboxContainer: {
     alignItems: 'center',

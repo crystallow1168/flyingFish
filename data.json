@@ -3,52 +3,82 @@
     {
       "id": 101,
       "name": "K & C Food wholesale",
-      "description": "Lorem ipsum dolor sit amet. Felis eget nunc lobortis mattis aliquam faucibus purus."
+      "description": "Lorem ipsum dolor sit amet. Felis eget nunc lobortis mattis aliquam faucibus purus.",
+      "menu": {
+        "fixed": ["Cod", "Halibut"]
+      }
     },
     {
       "id": 126,
       "name": "La Marea of the Sea",
-      "description": "Lorem ipsum dolor sit amet. Feugiat nisl pretium fusce id."
+      "description": "Lorem ipsum dolor sit amet. Feugiat nisl pretium fusce id.",
+      "menu": {
+        "fixed": ["Cod", "Halibut"]
+      }
     },
     {
       "id": 3109,
       "name": "The Kickin' Fish",
-      "description": "Lorem ipsum dolor sit amet. Orci ac auctor augue mauris augue neque gravida in fermentum."
+      "description": "Lorem ipsum dolor sit amet. Orci ac auctor augue mauris augue neque gravida in fermentum.",
+      "menu": {
+        "fixed": ["Cod", "Halibut"]
+      }
     },
     {
       "id": 18,
       "name": "EMC Seafood and Raw Bar",
-      "description": "Lorem ipsum dolor sit amet. Maecenas volutpat blandit aliquam etiam erat."
+      "description": "Lorem ipsum dolor sit amet. Maecenas volutpat blandit aliquam etiam erat.",
+      "menu": {
+        "fixed": ["Cod", "Halibut"]
+      }
     },
     {
       "id": 9156,
       "name": "Oyster Bar & Seafood",
-      "description": "Lorem ipsum dolor sit amet. Sed ullamcorper morbi tincidunt ornare massa."
+      "description": "Lorem ipsum dolor sit amet. Sed ullamcorper morbi tincidunt ornare massa.",
+      "menu": {
+        "fixed": ["Cod", "Halibut"]
+      }
     },
     {
       "id": 2291,
       "name": "Claw Shack",
-      "description": "Lorem ipsum dolor sit amet. Viverra nibh cras pulvinar mattis nunc sed blandit libero."
+      "description": "Lorem ipsum dolor sit amet. Viverra nibh cras pulvinar mattis nunc sed blandit libero.",
+      "menu": {
+        "fixed": ["Cod", "Halibut"]
+      }
     },
     {
       "id": 198,
       "name": "The Fish City",
-      "description": "Lorem ipsum dolor sit amet. Et tortor consequat id porta nibh venenatis."
+      "description": "Lorem ipsum dolor sit amet. Et tortor consequat id porta nibh venenatis.",
+      "menu": {
+        "fixed": ["Cod", "Halibut"]
+      }
     },
     {
       "id": 229,
       "name": "The Fish Market",
-      "description": "Lorem ipsum dolor sit amet. Bibendum ut tristique et egestas quis ipsum suspendisse."
+      "description": "Lorem ipsum dolor sit amet. Bibendum ut tristique et egestas quis ipsum suspendisse.",
+      "menu": {
+        "fixed": ["Cod", "Halibut"]
+      }
     },
     {
       "id": 8654,
       "name": "Big T's Seafood",
-      "description": "Lorem ipsum dolor sit amet. Etiam sit amet nisl purus in mollis nunc."
+      "description": "Lorem ipsum dolor sit amet. Etiam sit amet nisl purus in mollis nunc.",
+      "menu": {
+        "fixed": ["Cod", "Halibut"]
+      }
     },
     {
       "id": 7993,
       "name": "Billy’s Boston Chowder House",
-      "description": "Lorem ipsum dolor sit amet. Viverra nam libero justo laoreet sit amet cursus."
+      "description": "Lorem ipsum dolor sit amet. Viverra nam libero justo laoreet sit amet cursus.",
+      "menu": {
+        "fixed": ["Cod", "Halibut"]
+      }
     }
   ]
 }

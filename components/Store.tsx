@@ -4,12 +4,26 @@ import { Card, Divider } from 'react-native-elements';
 import { Store as StoreType } from '../screens/StoreListScreen';
 
 type Props = {
-  navigateOrderScreen: () => void,
-  store: StoreType
+  handleClearSearch: () => void,
+  store: StoreType,
+  navigation: any
 }
 
 const Store = (props: Props) => {
-  const { store: { name, description }, navigateOrderScreen } = props;
+  const { store: { name, description, menu }, handleClearSearch } = props;
+
+  const handleOrderButton = () => {
+
+    props.navigation.navigate({
+      routeName: 'Order',
+      params: {
+        name,
+        menu
+      }
+    })
+
+    handleClearSearch()
+  }
   return (
     <Card>
       <View style={styles.storeContainer}>
@@ -25,7 +39,7 @@ const Store = (props: Props) => {
       <Divider />
       <Button
         title="Go to Order"
-        onPress={navigateOrderScreen} />
+        onPress={handleOrderButton} />
     </Card>
   )
 }
