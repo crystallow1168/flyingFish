@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   },
   checkboxContainer: {
     alignItems: 'center',
-    marginTop: 250,
+    marginTop: 200,
     width: '90%',
   },
   checkoutContainer: {
